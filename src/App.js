@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Shop from './pages/Shop';
+import AllProducts from './pages/AllProducts';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Shop from './pages/Shop';
 
@@ -8,8 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Shop />} />
-        {/* <Route path="/fahim" element={<Fahim />} />
-        <Route path="/ramjan" element={<Ramjan />} /> */}
+        <Route path="/" element={<AllProducts />} />
       </Routes>
     </BrowserRouter>
   );

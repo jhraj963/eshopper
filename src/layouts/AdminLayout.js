@@ -11,10 +11,9 @@ function AdminLayout({children}) {
       <Header />
       <Slider />
       <Sidebar />
-        <div id="main">
-            
+        <div id="main">    
             <main>{children}</main>
-            <Footer />
+      <Footer />
         </div>
     </div>
   )
