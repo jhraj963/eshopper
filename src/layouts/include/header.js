@@ -1,21 +1,21 @@
 import React from 'react'
-import { Link,useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function Header() {
-    const activeMenu=(e)=>{
+    const activeMenu = (e) => {
         document.querySelectorAll('.submenu').forEach(
-            function(e){
+            function (e) {
                 e.classList.remove('active');
             }
         )
         const childElement = e.target.parentElement.querySelector('.submenu');
-        if(childElement && childElement.classList.contains('submenu')){
+        if (childElement && childElement.classList.contains('submenu')) {
             childElement.classList.add('active');
         }
     }
 
-	const location = useLocation();
-	const isLinkActive = (path)=>{
+    const location = useLocation();
+    const isLinkActive = (path) => {
         return location.pathname == path ? 'active' : "";
     }
     return (
@@ -112,18 +112,19 @@ function Header() {
                                 <ul className="nav navbar-nav collapse navbar-collapse">
                                     <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/")}`}>
                                         <Link to={"/"} className={`sidebar-link`}>
-                                            <i data-feather="home" width="20"></i> 
+                                            <i data-feather="home" width="20"></i>
                                             <span>Home</span>
                                         </Link>
                                     </li>
                                     <li className="dropdown"><a href="#">Shop<i className="fa fa-angle-down"></i></a>
                                         <ul role="menu" className="sub-menu">
-                                            <li onClick={activeMenu}s className={`sidebar-item ${isLinkActive("/AllProducts")}`}>
-                                                <Link to={"/AllProducts"} className={`sidebar-link`}>
-                                                    <i data-feather="home" width="20"></i> 
+                                            <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/all-products")}`}>
+                                                <Link to="/all-products" className="sidebar-link">
+                                                    <i data-feather="home" width="20"></i>
                                                     <span>All Products</span>
                                                 </Link>
                                             </li>
+
                                             <li><a href="product-details.html">Product Details</a></li>
                                             <li><a href="checkout.html">Checkout</a></li>
                                             <li><a href="cart.html">Cart</a></li>
