@@ -8,7 +8,7 @@ function AllProducts() {
 			
 			<div className="col-sm-9 padding-right">
 					<div className="features_items">
-						<h2 className="title text-center">All Products</h2>
+						<h1 className="title text-center">All Products</h1>
 						<div className="col-sm-4">
 							<div className="product-image-wrapper">
 								<div className="single-products">

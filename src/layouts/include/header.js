@@ -53,7 +53,7 @@ function Header() {
                     <div className="row">
                         <div className="col-sm-4">
                             <div className="logo pull-left">
-                                <a href="index.html"><img src="assets/images/home/logo.png" alt="" /></a>
+                                <a href="index.html"><img src="/assets/images/home/logo.png" alt="" /></a>
                             </div>
                             <div className="btn-group pull-right">
                                 <div className="btn-group">
@@ -84,9 +84,24 @@ function Header() {
                                 <ul className="nav navbar-nav">
                                     <li><a href="#"><i className="fa fa-user"></i> Account</a></li>
                                     <li><a href="#"><i className="fa fa-star"></i> Wishlist</a></li>
-                                    <li><a href="checkout.html"><i className="fa fa-crosshairs"></i> Checkout</a></li>
-                                    <li><a href="cart.html"><i className="fa fa-shopping-cart"></i> Cart</a></li>
-                                    <li><a href="login.html"><i className="fa fa-lock"></i> Login</a></li>
+                                    <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Checkout")}`}>
+                                        <Link to="/Checkout" className="sidebar-link">
+                                            <i data-feather="home" width="20"></i>
+                                            <span>Checkout</span>
+                                        </Link>
+                                    </li>
+                                    <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Cart")}`}>
+                                        <Link to="/Cart" className="sidebar-link">
+                                            <i data-feather="home" width="20"></i>
+                                            <span>Cart</span>
+                                        </Link>
+                                    </li>
+                                    <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/login")}`}>
+                                        <Link to="/login" className="sidebar-link">
+                                            <i data-feather="home" width="20"></i>
+                                            <span>Login</span>
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -126,19 +141,49 @@ function Header() {
                                             </li>
 
                                             <li><a href="product-details.html">Product Details</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="login.html">Login</a></li>
+                                            <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Checkout")}`}>
+                                                <Link to="/Checkout" className="sidebar-link">
+                                                    <i data-feather="home" width="20"></i>
+                                                    <span>Checkout</span>
+                                                </Link>
+                                            </li>
+                                            <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Cart")}`}>
+                                                <Link to="/Cart" className="sidebar-link">
+                                                    <i data-feather="home" width="20"></i>
+                                                    <span>Cart</span>
+                                                </Link>
+                                            </li>
+                                            <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/login")}`}>
+                                                <Link to="/login" className="sidebar-link">
+                                                    <i data-feather="home" width="20"></i>
+                                                    <span>Login</span>
+                                                </Link>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li className="dropdown"><a href="#">Blog<i className="fa fa-angle-down"></i></a>
                                         <ul role="menu" className="sub-menu">
-                                            <li><a href="blog.html">Blog List</a></li>
-                                            <li><a href="blog-single.html">Blog Single</a></li>
+                                            <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/BlogList")}`}>
+                                                <Link to="/BlogList" className="sidebar-link">
+                                                    <i data-feather="home" width="20"></i>
+                                                    <span>Blog List</span>
+                                                </Link>
+                                            </li>
+                                            <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/BlogSingle")}`}>
+                                                <Link to="/BlogSingle" className="sidebar-link">
+                                                    <i data-feather="home" width="20"></i>
+                                                    <span>Blog Single</span>
+                                                </Link>
+                                            </li> 
                                         </ul>
                                     </li>
-                                    <li><a href="404.html">404</a></li>
-                                    <li><a href="contact-us.html">Contact</a></li>
+                                    {/* <li><a href="404.html">404</a></li> */}
+                                    <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/contact-us")}`}>
+                                        <Link to="/contact-us" className="sidebar-link">
+                                            <i data-feather="home" width="20"></i>
+                                            <span>Contact</span>
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
