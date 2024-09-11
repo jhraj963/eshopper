@@ -10,7 +10,7 @@ function Shop() {
             
             <div className="container">
                 <div className="row">
-                    <div className="col-sm-9">
+                    <div className="col-sm-11 padding-right">
                         <div id="slider-carousel" className="carousel slide" data-ride="carousel">
                             <ol className="carousel-indicators">
                                 <li data-target="#slider-carousel" data-slide-to="0" className="active"></li>
@@ -76,7 +76,7 @@ function Shop() {
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-sm-9 padding-right">
+                        <div className="col-sm-11 padding-right">
                             <div className="features_items">
                                 {/* <!--features_items--> */}
                                 <h2 className="title text-center">Features Items</h2>
