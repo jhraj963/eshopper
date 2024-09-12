@@ -102,6 +102,12 @@ function Header() {
                                             <span>Login</span>
                                         </Link>
                                     </li>
+                                    <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Register")}`}>
+                                        <Link to="/Register" className="sidebar-link">
+                                            <i data-feather="home" width="20"></i>
+                                            <span>Register</span>
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
