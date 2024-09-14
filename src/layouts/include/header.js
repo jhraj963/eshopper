@@ -1,7 +1,13 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { logout } from '../../Api/AllApi'
+import { useLocation, Link,  useNavigate} from 'react-router-dom';
 
 function Header() {
+    const navigate=useNavigate();
+    const handelLogout = () => {
+        logout();
+        navigate('/Login');
+    }
     const activeMenu = (e) => {
         document.querySelectorAll('.submenu').forEach(
             function (e) {
@@ -96,8 +102,11 @@ function Header() {
                                             <span>Cart</span>
                                         </Link>
                                     </li>
+                                    {/* <li>
+                                        <button type='button' className='btn btn-link' onClick={handelLogout}>Logout</button>
+                                    </li> */}
                                     <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/login")}`}>
-                                        <Link to="/login" className="sidebar-link">
+                                        <Link to="/login" className="sidebar-link" onClick={handelLogout}>
                                             <i data-feather="home" width="20"></i>
                                             <span>Logout</span>
                                         </Link>

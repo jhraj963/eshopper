@@ -27,7 +27,7 @@ function App() {
             <Shop />
           </Protected>
         } />
-        <Route path={"/AllProducts"} element={
+        <Route path={"/all-products"} element={
           <Protected isSignedIn={isSignedIn} >
             <AllProducts />
           </Protected>
