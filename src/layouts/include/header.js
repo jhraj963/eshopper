@@ -99,15 +99,15 @@ function Header() {
                                     <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/login")}`}>
                                         <Link to="/login" className="sidebar-link">
                                             <i data-feather="home" width="20"></i>
-                                            <span>Login</span>
+                                            <span>Logout</span>
                                         </Link>
                                     </li>
-                                    <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Register")}`}>
+                                    {/* <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Register")}`}>
                                         <Link to="/Register" className="sidebar-link">
                                             <i data-feather="home" width="20"></i>
                                             <span>Register</span>
                                         </Link>
-                                    </li>
+                                    </li> */}
                                 </ul>
                             </div>
                         </div>
