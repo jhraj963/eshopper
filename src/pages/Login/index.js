@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AuthLayout from '../../layouts/AuthLayout';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, Navigate } from 'react-router-dom';
 import { login } from '../../Api/AllApi';
 function Login() {
 	const navigate = useNavigate();
@@ -13,17 +13,19 @@ function Login() {
 	const handleSubmit = async (event) => {
 		event.preventDefault();
 		let check = await login(inputs);
-		if (check)
-			navigate('/');
-		else
+		if (check) {
+			window.location = "http://localhost:3000/"
+		} else {
 			alert("Sorry password or email address is wrong!");
+		}
 	}
+	
 	return (
 		<AuthLayout>
 			<div className="text-center mb-5">
 				<img src="./assets/images/home/logo.png" height="48" className='mb-4' />
 				<h3>Sign In</h3>
-				<p>Please sign in to continue to Voler.</p>
+				<p>Please sign in to continue</p>
 			</div>
 			<form onSubmit={handleSubmit}>
 				<div className="form-group position-relative has-icon-left">

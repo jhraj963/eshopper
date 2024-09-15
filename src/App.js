@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Shop from './pages/Shop';
 import AllProducts from './pages/AllProducts';
 import Contact from './pages/Contact';
@@ -12,10 +12,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Protected from './components/protected';
 
 function App() {
-  const [isSignedIn, setIsSignedIn] = useState(() => {
-    const userLogged = localStorage.getItem("access_token");
-    return userLogged || false;
-  });
+  const isSignedIn = localStorage.getItem("access_token") || false;
 
   return (
     <BrowserRouter>

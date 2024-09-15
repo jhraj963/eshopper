@@ -6,8 +6,9 @@ function Header() {
     const navigate=useNavigate();
     const handelLogout = () => {
         logout();
-        navigate('/Login');
+        navigate('/login');
     }
+    
     const activeMenu = (e) => {
         document.querySelectorAll('.submenu').forEach(
             function (e) {
@@ -105,8 +106,8 @@ function Header() {
                                     {/* <li>
                                         <button type='button' className='btn btn-link' onClick={handelLogout}>Logout</button>
                                     </li> */}
-                                    <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/login")}`}>
-                                        <Link to="/login" className="sidebar-link" onClick={handelLogout}>
+                                    <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Login")}`}>
+                                        <Link to="/Login" className="sidebar-link" onClick={handelLogout}>
                                             <i data-feather="home" width="20"></i>
                                             <span>Logout</span>
                                         </Link>
@@ -168,8 +169,8 @@ function Header() {
                                                     <span>Cart</span>
                                                 </Link>
                                             </li>
-                                            <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/login")}`}>
-                                                <Link to="/login" className="sidebar-link">
+                                            <li onClick={activeMenu} className={`sidebar-item ${isLinkActive("/Login")}`}>
+                                                <Link to="/Login" className="sidebar-link">
                                                     <i data-feather="home" width="20"></i>
                                                     <span>Login</span>
                                                 </Link>
